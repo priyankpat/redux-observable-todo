@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "./src/store/store";
 import Header from "./src/components/Header";
 import TodoList from "./src/components/TodoList";
+import BluetoothList from "./src/components/BluetoothList";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <View style={styles.container}>
         <Header />
         <TodoList style={styles.todoList} />
+        <BluetoothList style={styles.todoList} />
       </View>
     </Provider>
   );
@@ -20,9 +22,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    alignItems: "stretch"
+    alignItems: "stretch",
   },
   todoList: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
